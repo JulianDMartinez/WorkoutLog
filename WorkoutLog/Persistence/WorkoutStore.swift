@@ -22,7 +22,7 @@ class WorkoutStore {
         }
 
         persistentContainer.loadPersistentStores { _, _ in }
-        
+
         if forPreview {
             addMockData(moc: persistentContainer.viewContext)
         }
@@ -43,7 +43,20 @@ extension WorkoutStore {
 
         category1.workouts = [cat1Workout1]
         cat1Workout1.repetitions = [cat1Wor1Rep1]
-        
+
+        let category2 = CategoryEntity(context: moc)
+        category2.name = "Legs"
+        category2.lastCompleted = Date(timeIntervalSince1970: 1722613300)
+
+        let cat2Workout1 = WorkoutEntity(context: moc)
+        cat2Workout1.name = "Leg Press"
+
+        let cat2Wor1Rep1 = RepetitionEntity(context: moc)
+        cat2Wor1Rep1.name = "5x45"
+
+        category2.workouts = [cat2Workout1]
+        cat2Workout1.repetitions = [cat2Wor1Rep1]
+
         try? moc.save()
     }
 }
