@@ -11,7 +11,13 @@ import SwiftUI
 struct WorkoutLogApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                MainScreen()
+                    .environment(
+                        \.managedObjectContext,
+                        WorkoutStore(forPreview: true).persistentContainer.viewContext
+                    )
+            }
         }
     }
 }

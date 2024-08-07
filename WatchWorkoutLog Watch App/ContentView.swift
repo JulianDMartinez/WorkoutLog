@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  WorkoutLog
+//  WatchWorkoutLog Watch App
 //
-//  Created by Julian Martinez on 8/5/24.
+//  Created by Julian Martinez on 8/6/24.
 //
 
 import SwiftUI
