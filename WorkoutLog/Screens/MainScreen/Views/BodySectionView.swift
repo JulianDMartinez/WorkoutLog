@@ -1,5 +1,5 @@
 //
-//  CategoryView.swift
+//  BodySectionView.swift
 //  WorkoutLog
 //
 //  Created by Julian Martinez on 8/9/24.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CategoryView: View {
-    @State var category: CategoryEntity
+struct BodySectionView: View {
+    @State var bodySection: BodySectionEntity
     @State var testBool = false
 
     var body: some View {
@@ -33,12 +33,12 @@ struct CategoryView: View {
     private func getItemContent() -> some View {
         #if os(watchOS)
             return
-                List(Array(category.workouts as! Set<WorkoutEntity>), id: \.self) { workout in
+                List(Array(bodySection.workouts as! Set<WorkoutEntity>), id: \.self) { workout in
                     WorkoutView(workout: workout)
                 }
         #else
             return
-                List(Array(category.workouts as! Set<WorkoutEntity>), id: \.self) { workout in
+                List(Array(bodySection.workouts as! Set<WorkoutEntity>), id: \.self) { workout in
                     WorkoutView(workout: workout)
                 }
         #endif
@@ -46,9 +46,9 @@ struct CategoryView: View {
 
     private func getItemLabel() -> some View {
         return ToggleRowLabel(
-            isDone: $category.isDone,
-            title: category.name ?? "",
-            subtitle: "Done " + (category.lastCompleted?.formatted(date: .numeric, time: .omitted) ?? "")
+            isDone: $bodySection.isDone,
+            title: bodySection.name ?? "",
+            subtitle: "Done " + (bodySection.lastCompleted?.formatted(date: .numeric, time: .omitted) ?? "")
         )
     }
 }

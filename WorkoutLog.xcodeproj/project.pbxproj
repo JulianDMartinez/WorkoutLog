@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B96E7E1D2C66658000457378 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1C2C66657F00457378 /* CategoryView.swift */; };
-		B96E7E1E2C66658000457378 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1C2C66657F00457378 /* CategoryView.swift */; };
+		B96E7E1D2C66658000457378 /* BodySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1C2C66657F00457378 /* BodySectionView.swift */; };
+		B96E7E1E2C66658000457378 /* BodySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1C2C66657F00457378 /* BodySectionView.swift */; };
 		B96E7E202C6665A900457378 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1F2C6665A900457378 /* WorkoutView.swift */; };
 		B96E7E212C6665A900457378 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1F2C6665A900457378 /* WorkoutView.swift */; };
 		B96E7E232C6665B200457378 /* RepetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E222C6665B200457378 /* RepetitionView.swift */; };
@@ -59,7 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B96E7E1C2C66657F00457378 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		B96E7E1C2C66657F00457378 /* BodySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodySectionView.swift; sourceTree = "<group>"; };
 		B96E7E1F2C6665A900457378 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		B96E7E222C6665B200457378 /* RepetitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionView.swift; sourceTree = "<group>"; };
 		B96E7E252C6665BA00457378 /* ToggleRowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleRowLabel.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 				B96E7E252C6665BA00457378 /* ToggleRowLabel.swift */,
 				B96E7E222C6665B200457378 /* RepetitionView.swift */,
 				B96E7E1F2C6665A900457378 /* WorkoutView.swift */,
-				B96E7E1C2C66657F00457378 /* CategoryView.swift */,
+				B96E7E1C2C66657F00457378 /* BodySectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					B9F772D52C618CD7007121F5 = {
 						CreatedOnToolsVersion = 15.4;
@@ -307,7 +307,7 @@
 			files = (
 				B9F772EB2C618D3E007121F5 /* WorkoutStore.xcdatamodeld in Sources */,
 				B96E7E262C6665BA00457378 /* ToggleRowLabel.swift in Sources */,
-				B96E7E1E2C66658000457378 /* CategoryView.swift in Sources */,
+				B96E7E1E2C66658000457378 /* BodySectionView.swift in Sources */,
 				B96E7E202C6665A900457378 /* WorkoutView.swift in Sources */,
 				B9F772F02C6192A9007121F5 /* MainScreenViewModel.swift in Sources */,
 				B96E7E242C6665B200457378 /* RepetitionView.swift in Sources */,
@@ -324,7 +324,7 @@
 			files = (
 				B9F773132C62B069007121F5 /* MainScreen.swift in Sources */,
 				B96E7E272C6665BA00457378 /* ToggleRowLabel.swift in Sources */,
-				B96E7E1D2C66658000457378 /* CategoryView.swift in Sources */,
+				B96E7E1D2C66658000457378 /* BodySectionView.swift in Sources */,
 				B96E7E212C6665A900457378 /* WorkoutView.swift in Sources */,
 				B9F773072C62AE40007121F5 /* MainScreenViewModel.swift in Sources */,
 				B96E7E232C6665B200457378 /* RepetitionView.swift in Sources */,
@@ -380,6 +380,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -441,6 +442,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -463,12 +465,12 @@
 		B9F772E62C618CD8007121F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WorkoutLog/WorkoutLog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutLog/Preview Content\"";
 				DEVELOPMENT_TEAM = J658BJ7LAB;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -503,12 +505,12 @@
 		B9F772E72C618CD8007121F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WorkoutLog/WorkoutLog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkoutLog/Preview Content\"";
 				DEVELOPMENT_TEAM = J658BJ7LAB;
 				ENABLE_HARDENED_RUNTIME = YES;

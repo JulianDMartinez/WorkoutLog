@@ -11,9 +11,19 @@ import CoreData
 @Observable
 class MainScreenViewModel {
     let moc: NSManagedObjectContext
-    var categories: [CategoryEntity] = []
+    var bodySections: [BodySectionEntity] = []
     
     init(moc: NSManagedObjectContext) {
         self.moc = moc
+    }
+    
+    func fetch() {
+        let request = BodySectionEntity.fetchRequest()
+        
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \BodySectionEntity.lastCompleted, ascending: true)]
+        
+        if let bodySections = try? moc.fetch(request) {
+            self.bodySections = bodySections
+        }
     }
 }

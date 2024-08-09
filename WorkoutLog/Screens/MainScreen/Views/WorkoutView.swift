@@ -57,6 +57,6 @@ struct WorkoutView: View {
                 Image(systemName: "chevron.right")
             #endif
         }
-        .navigationTitle(workout.category?.name ?? "")
+        .navigationTitle(workout.bodySection?.name ?? "")
     }
 }

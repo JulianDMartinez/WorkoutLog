@@ -11,8 +11,8 @@ struct MainScreen: View {
     @State var viewModel: MainScreenViewModel
 
     var body: some View {
-        List(viewModel.categories) { category in
-            CategoryView(category: category)
+        List(viewModel.bodySections) { bodySection in
+            BodySectionView(bodySection: bodySection)
         }
         .navigationTitle("Weight Lifting")
     }
