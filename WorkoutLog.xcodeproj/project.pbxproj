@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B96E7E1D2C66658000457378 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1C2C66657F00457378 /* CategoryView.swift */; };
+		B96E7E1E2C66658000457378 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1C2C66657F00457378 /* CategoryView.swift */; };
+		B96E7E202C6665A900457378 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1F2C6665A900457378 /* WorkoutView.swift */; };
+		B96E7E212C6665A900457378 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E1F2C6665A900457378 /* WorkoutView.swift */; };
+		B96E7E232C6665B200457378 /* RepetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E222C6665B200457378 /* RepetitionView.swift */; };
+		B96E7E242C6665B200457378 /* RepetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E222C6665B200457378 /* RepetitionView.swift */; };
+		B96E7E262C6665BA00457378 /* ToggleRowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E252C6665BA00457378 /* ToggleRowLabel.swift */; };
+		B96E7E272C6665BA00457378 /* ToggleRowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E7E252C6665BA00457378 /* ToggleRowLabel.swift */; };
 		B9F772DA2C618CD7007121F5 /* WorkoutLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F772D92C618CD7007121F5 /* WorkoutLogApp.swift */; };
 		B9F772DC2C618CD7007121F5 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F772DB2C618CD7007121F5 /* MainScreen.swift */; };
 		B9F772DE2C618CD8007121F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F772DD2C618CD8007121F5 /* Assets.xcassets */; };
@@ -51,6 +59,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B96E7E1C2C66657F00457378 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		B96E7E1F2C6665A900457378 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		B96E7E222C6665B200457378 /* RepetitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepetitionView.swift; sourceTree = "<group>"; };
+		B96E7E252C6665BA00457378 /* ToggleRowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleRowLabel.swift; sourceTree = "<group>"; };
 		B9F772D62C618CD7007121F5 /* WorkoutLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F772D92C618CD7007121F5 /* WorkoutLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutLogApp.swift; sourceTree = "<group>"; };
 		B9F772DB2C618CD7007121F5 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -139,8 +151,7 @@
 		B9F772EC2C619077007121F5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B9F772DB2C618CD7007121F5 /* MainScreen.swift */,
-				B9F772EF2C6192A9007121F5 /* MainScreenViewModel.swift */,
+				B9F773162C665C6E007121F5 /* MainScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -167,6 +178,27 @@
 		B9F7730B2C62AF2B007121F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9F773162C665C6E007121F5 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B9F773172C665C7A007121F5 /* Views */,
+				B9F772DB2C618CD7007121F5 /* MainScreen.swift */,
+				B9F772EF2C6192A9007121F5 /* MainScreenViewModel.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		B9F773172C665C7A007121F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B96E7E252C6665BA00457378 /* ToggleRowLabel.swift */,
+				B96E7E222C6665B200457378 /* RepetitionView.swift */,
+				B96E7E1F2C6665A900457378 /* WorkoutView.swift */,
+				B96E7E1C2C66657F00457378 /* CategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,7 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F772EB2C618D3E007121F5 /* WorkoutStore.xcdatamodeld in Sources */,
+				B96E7E262C6665BA00457378 /* ToggleRowLabel.swift in Sources */,
+				B96E7E1E2C66658000457378 /* CategoryView.swift in Sources */,
+				B96E7E202C6665A900457378 /* WorkoutView.swift in Sources */,
 				B9F772F02C6192A9007121F5 /* MainScreenViewModel.swift in Sources */,
+				B96E7E242C6665B200457378 /* RepetitionView.swift in Sources */,
 				B9F773152C62DA3A007121F5 /* WorkoutEntity+Ext.swift in Sources */,
 				B9F772EE2C6190DD007121F5 /* WorkoutStore.swift in Sources */,
 				B9F772DC2C618CD7007121F5 /* MainScreen.swift in Sources */,
@@ -287,7 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F773132C62B069007121F5 /* MainScreen.swift in Sources */,
+				B96E7E272C6665BA00457378 /* ToggleRowLabel.swift in Sources */,
+				B96E7E1D2C66658000457378 /* CategoryView.swift in Sources */,
+				B96E7E212C6665A900457378 /* WorkoutView.swift in Sources */,
 				B9F773072C62AE40007121F5 /* MainScreenViewModel.swift in Sources */,
+				B96E7E232C6665B200457378 /* RepetitionView.swift in Sources */,
 				B9F773092C62AE47007121F5 /* WorkoutStore.swift in Sources */,
 				B9F7730A2C62AE4A007121F5 /* WorkoutStore.xcdatamodeld in Sources */,
 				B9F772FA2C62AE11007121F5 /* ContentView.swift in Sources */,
