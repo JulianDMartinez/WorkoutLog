@@ -6,8 +6,14 @@
 //
 
 import Foundation
+import CoreData
 
 @Observable
 class MainScreenViewModel {
+    let moc: NSManagedObjectContext
+    var categories: [CategoryEntity] = []
     
+    init(moc: NSManagedObjectContext) {
+        self.moc = moc
+    }
 }

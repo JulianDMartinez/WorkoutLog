@@ -8,16 +8,10 @@
 import SwiftUI
 
 struct MainScreen: View {
-    @State private var viewModel = MainScreenViewModel()
-    @FetchRequest(sortDescriptors: [
-        NSSortDescriptor(
-            keyPath: \CategoryEntity.lastCompleted,
-            ascending: false
-        ),
-    ]) private var categories: FetchedResults<CategoryEntity>
+    @State var viewModel: MainScreenViewModel
 
     var body: some View {
-        List(categories) { category in
+        List(viewModel.categories) { category in
             CategoryView(category: category)
         }
         .navigationTitle("Weight Lifting")
@@ -26,10 +20,10 @@ struct MainScreen: View {
 
 #Preview {
     NavigationStack {
-        MainScreen()
-            .environment(
-                \.managedObjectContext,
-                WorkoutStore(forPreview: true).persistentContainer.viewContext
+        MainScreen(
+            viewModel: MainScreenViewModel(
+                moc: WorkoutStore(forPreview: true).persistentContainer.viewContext
             )
+        )
     }
 }

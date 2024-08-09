@@ -12,11 +12,11 @@ struct WorkoutLogApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                MainScreen()
-                    .environment(
-                        \.managedObjectContext,
-                        WorkoutStore(forPreview: true).persistentContainer.viewContext
+                MainScreen(
+                    viewModel: MainScreenViewModel(
+                        moc: WorkoutStore().persistentContainer.viewContext
                     )
+                )
             }
         }
     }
